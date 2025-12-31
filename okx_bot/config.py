@@ -1,5 +1,8 @@
 import os
+
 from okx import OkxRestClient
+from dotenv import load_dotenv
+load_dotenv()
 
 # 配置（用环境变量更好）
 OKX_API_KEY = os.getenv('OKX_API_KEY')
@@ -32,4 +35,5 @@ PRICE_ALERTS = {}
 ALERT_COUNTER = 0
 
 # 初始化 OKX 客户端
+
 api = OkxRestClient(OKX_API_KEY, OKX_SECRET_KEY, OKX_PASSPHRASE)
